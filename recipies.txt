@@ -6,4 +6,7 @@ pasta.
 
 chiekn fry.
 
+beans.
+pizza.
+
 Thank you.
