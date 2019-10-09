@@ -1,0 +1,71 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - register_request:
+      use_entities : None
+  - user_info
+
+entities:
+  - first_name
+  - last_name
+
+slots:
+  first_name:
+    type: unfeaturized
+    auto_fill: false
+  last_name:
+    type: unfeaturized
+    auto_fill: false
+
+templates:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_ask_first_name:
+  - text: "Provide your first name"
+
+  utter_ask_last_name:
+  - text: "Provide your last name"
+
+  utter_wrong_first_name:
+  - text: "Wrong data type for first name"
+
+  utter_wrong_last_name:
+  - text: "Wrong data type for last name"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  # utter_default:
+  # - text: "Didn't understand what you are talking about"
+
+  utter_slot_values:
+  - text: "Below are the details you entered: \n
+           - First name: {first_name}\n
+           - Last name: {last_name}"
+
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_slot_values
+
+forms:
+  - register_form
